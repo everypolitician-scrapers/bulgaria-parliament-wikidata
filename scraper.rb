@@ -13,5 +13,4 @@ require 'wikidata/fetcher'
 
 names = @pages.map { |c| WikiData::Category.new(c, 'bg').member_titles }.flatten.uniq
 EveryPolitician::Wikidata.scrape_wikidata(names: { bg: names })
-warn EveryPolitician::Wikidata.notify_rebuilder
 
